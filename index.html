@@ -8,6 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electro Vibes ENSA 2026</title>
+<meta name="description" content="Festival de musique électronique à l'ENSA El Jadida, 12 et 13 décembre 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top">
@@ -18,20 +25,31 @@
     <a href="#inscription">Inscription</a>
   </nav>
 </header>
+<header class="top">
+  <a class="logo" href="#accueil">Electro Vibes</a>
+  <nav aria-label="Navigation principale">
+    <a href="#programme">Programme</a>
+    <a href="#billets">Billets</a>
+    <a href="#inscription">Inscription</a>
+  </nav>
+</header>
 
-  <main>
-    <!-- Accueil -->
-    <section id="accueil" class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Portfolio Ingénieur</p>
-        <h1>Tounfi Souhail <span class="amp">&amp;</span> Goujdad Yassine</h1>
-        <p class="lead">Étudiants ingénieurs en informatique à l'ENSA El Jadida. Nous concevons des applications web, des architectures backend et des infrastructures cloud.</p>
-        <div class="hero-actions">
-          <a href="#projets" class="btn btn-primary">Voir nos projets</a>
-          <a href="cv.pdf" class="btn btn-outline" download>Télécharger le CV</a>
-        </div>
-      </div>
-    </section>
+<main>
+<section class="hero" id="accueil">
+  <canvas id="wave" aria-hidden="true"></canvas>
+  <div class="hero-text">
+    <p class="when">17 et 20 décembre 2026, ENSA El Jadida</p>
+    <h1>Electro Vibes <span>ENSA 2026</span></h1>
+    <p class="tag">Deux nuits. Un seul rythme.</p>
+    <div class="countdown" id="countdown" role="timer" aria-live="off">
+      <div><b id="d">--</b><small>jours</small></div>
+      <div><b id="h">--</b><small>heures</small></div>
+      <div><b id="m">--</b><small>minutes</small></div>
+      <div><b id="s">--</b><small>secondes</small></div>
+    </div>
+    <a class="btn" href="#inscription">Réserver ma place</a>
+  </div>
+</section>
 
 <section id="programme" class="block">
   <h2>Programme</h2>
@@ -41,7 +59,23 @@
   </div>
   <ol class="lineup" id="lineup"></ol>
 </section>
+<section id="programme" class="block">
+  <h2>Programme</h2>
+  <div class="tabs" role="tablist" aria-label="Choisir un jour">
+    <button role="tab" aria-selected="true" data-day="ven">Vendredi 12</button>
+    <button role="tab" aria-selected="false" data-day="sam">Samedi 13</button>
+  </div>
+  <ol class="lineup" id="lineup"></ol>
+</section>
 
+<section id="billets" class="block light">
+  <h2>Billets</h2>
+  <div class="passes">
+    <article><h3>Pass Étudiant</h3><p class="price">30 MAD</p><p>Sur présentation de la carte étudiant. Accès aux deux jours.</p></article>
+    <article><h3>Pass Standard</h3><p class="price">60 MAD</p><p>Accès aux deux jours pour une personne.</p></article>
+    <article><h3>Pass Duo</h3><p class="price">100 MAD</p><p>Accès aux deux jours pour deux personnes.</p></article>
+  </div>
+</section>
 <section id="billets" class="block light">
   <h2>Billets</h2>
   <div class="passes">
@@ -76,7 +110,37 @@
   </form>
 </section>
 </main>
+<section id="inscription" class="block">
+  <h2>Réserver ma place</h2>
+  <form id="form" novalidate>
+    <label>Nom complet
+      <input type="text" name="nom" autocomplete="name" required>
+      <span class="err" data-for="nom"></span>
+    </label>
+    <label>Adresse e-mail
+      <input type="email" name="email" autocomplete="email" required>
+      <span class="err" data-for="email"></span>
+    </label>
+    <label>Pass
+      <select name="pass" required>
+        <option value="">Choisir un pass</option>
+        <option>Pass Étudiant, 30 MAD</option>
+        <option>Pass Standard, 60 MAD</option>
+        <option>Pass Duo, 100 MAD</option>
+      </select>
+      <span class="err" data-for="pass"></span>
+    </label>
+    <button class="btn" type="submit">Réserver ma place</button>
+    <p id="result" role="status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
 
+<footer>
+  <p>Electro Vibes ENSA 2026, École Nationale des Sciences Appliquées d'El Jadida.</p>
+  <p>contact@electrovibes-ensa.example</p>
+</footer>
+<script src="script.js"></script>
 <footer>
   <p>Electro Vibes ENSA 2026, École Nationale des Sciences Appliquées d'El Jadida.</p>
   <p>contact@electrovibes-ensa.example</p>
