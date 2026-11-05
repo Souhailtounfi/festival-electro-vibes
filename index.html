@@ -1,169 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio Ingénieur - Tounfi Souhail & Goujdad Yassine, étudiants ingénieurs à l'ENSA El Jadida.">
-  <title>Portfolio Ingénieur - Tounfi Souhail & Goujdad Yassine</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electro Vibes ENSA 2026</title>
+<meta name="description" content="Festival de musique électronique à l'ENSA El Jadida, 12 et 13 décembre 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="top">
+  <a class="logo" href="#accueil">Electro Vibes</a>
+  <nav aria-label="Navigation principale">
+    <a href="#programme">Programme</a>
+    <a href="#billets">Billets</a>
+    <a href="#inscription">Inscription</a>
+  </nav>
+</header>
 
-  <header class="site-header">
-    <nav class="nav container" aria-label="Navigation principale">
-      <a href="#accueil" class="logo">S<span>&amp;</span>Y</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">🌙</button>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Accueil -->
-    <section id="accueil" class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Portfolio Ingénieur</p>
-        <h1>Tounfi Souhail <span class="amp">&amp;</span> Goujdad Yassine</h1>
-        <p class="lead">Étudiants ingénieurs en informatique à l'ENSA El Jadida. Nous concevons des applications web, des architectures backend et des infrastructures cloud.</p>
-        <div class="hero-actions">
-          <a href="#projets" class="btn btn-primary">Voir nos projets</a>
-          <a href="cv.pdf" class="btn btn-outline" download>Télécharger le CV</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- À propos -->
-    <section id="apropos" class="section">
-      <div class="container">
-        <h2>À propos</h2>
-        <div class="about-grid">
-          <article class="card">
-            <h3>Tounfi Souhail</h3>
-            <p class="role">Chef de projet &amp; Développeur Web</p>
-            <p>Étudiant en 2e année du cycle ingénieur (filière informatique) à l'ENSA El Jadida. Intéressé par l'architecture backend, l'infrastructure cloud et les outils frontend modernes. Il a notamment développé MediCab, une application SaaS pour cliniques privées.</p>
-          </article>
-          <article class="card">
-            <h3>Goujdad Yassine</h3>
-            <p class="role">Designer, Rédacteur &amp; Responsable du site</p>
-            <p>Étudiant en 2e année du cycle ingénieur (filière informatique) à l'ENSA El Jadida. Il s'occupe de l'identité visuelle, de la rédaction des contenus et de la maintenance du portfolio. Il a également participé au projet MediCab et aux travaux pratiques cloud.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Compétences -->
-    <section id="competences" class="section section-alt">
-      <div class="container">
-        <h2>Compétences techniques</h2>
-        <div class="skills-grid">
-          <div class="card">
-            <h3>Backend</h3>
-            <ul class="tags">
-              <li>Java</li><li>Spring Boot</li><li>REST API</li><li>SQL</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Frontend</h3>
-            <ul class="tags">
-              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Next.js</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Cloud &amp; Virtualisation</h3>
-            <ul class="tags">
-              <li>Virtualisation</li><li>Linux</li><li>Cloud</li><li>Docker</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Outils</h3>
-            <ul class="tags">
-              <li>Git &amp; GitHub</li><li>LaTeX</li><li>Overleaf</li><li>VS Code</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projets -->
-    <section id="projets" class="section">
-      <div class="container">
-        <h2>Projets réalisés</h2>
-
-        <div class="filters" role="group" aria-label="Filtrer les projets par catégorie">
-          <button class="filter-btn active" data-filter="all">Tous</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="cloud">Cloud</button>
-        </div>
-
-        <div class="projects-grid" id="projectsGrid">
-          <article class="card project" data-category="web">
-            <span class="badge">Web</span>
-            <h3>MediCab</h3>
-            <p>Application SaaS de gestion pour cliniques médicales privées au Maroc : dossiers patients, rendez-vous et suivi administratif.</p>
-            <p class="stack">Spring Boot · Next.js</p>
-            <a href="https://github.com/VOTRE-COMPTE/medicab" target="_blank" rel="noopener" class="link">Voir sur GitHub →</a>
-          </article>
-
-          <article class="card project" data-category="cloud">
-            <span class="badge">Cloud</span>
-            <h3>Labs Cloud &amp; Virtualisation</h3>
-            <p>Série de travaux pratiques sur la virtualisation et le déploiement d'infrastructures cloud, documentés dans un rapport technique complet.</p>
-            <p class="stack">Virtualisation · Cloud · Linux</p>
-            <a href="https://github.com/VOTRE-COMPTE/labs-cloud" target="_blank" rel="noopener" class="link">Voir sur GitHub →</a>
-          </article>
-
-          <article class="card project" data-category="web">
-            <span class="badge">Web</span>
-            <h3>Portfolio Ingénieur</h3>
-            <p>Le présent site : un portfolio responsive avec mode sombre/clair, filtre de projets et formulaire de contact.</p>
-            <p class="stack">HTML · CSS · JavaScript</p>
-            <a href="https://github.com/VOTRE-COMPTE/portfolio" target="_blank" rel="noopener" class="link">Voir sur GitHub →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section section-alt">
-      <div class="container contact-wrap">
-        <h2>Contact</h2>
-        <p class="lead-small">Une opportunité de stage, un projet ou une question ? Écrivez-nous.</p>
-
-        <form id="contactForm" class="contact-form" novalidate>
-          <div class="field">
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name" required placeholder="Votre nom">
-            <small class="error" id="nameError"></small>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="vous@exemple.com">
-            <small class="error" id="emailError"></small>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
-            <small class="error" id="messageError"></small>
-          </div>
-          <button type="submit" class="btn btn-primary">Envoyer</button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Tounfi Souhail &amp; Goujdad Yassine · ENSA El Jadida</p>
-      <p><a href="https://github.com/VOTRE-COMPTE" target="_blank" rel="noopener">GitHub</a></p>
+<main>
+<section class="hero" id="accueil">
+  <canvas id="wave" aria-hidden="true"></canvas>
+  <div class="hero-text">
+    <p class="when">12 et 13 décembre 2026, ENSA El Jadida</p>
+    <h1>Electro Vibes <span>ENSA 2026</span></h1>
+    <p class="tag">Deux nuits. Un seul rythme.</p>
+    <div class="countdown" id="countdown" role="timer" aria-live="off">
+      <div><b id="d">--</b><small>jours</small></div>
+      <div><b id="h">--</b><small>heures</small></div>
+      <div><b id="m">--</b><small>minutes</small></div>
+      <div><b id="s">--</b><small>secondes</small></div>
     </div>
-  </footer>
+    <a class="btn" href="#inscription">Réserver ma place</a>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="programme" class="block">
+  <h2>Programme</h2>
+  <div class="tabs" role="tablist" aria-label="Choisir un jour">
+    <button role="tab" aria-selected="true" data-day="ven">Vendredi 12</button>
+    <button role="tab" aria-selected="false" data-day="sam">Samedi 13</button>
+  </div>
+  <ol class="lineup" id="lineup"></ol>
+</section>
+
+<section id="billets" class="block light">
+  <h2>Billets</h2>
+  <div class="passes">
+    <article><h3>Pass Étudiant</h3><p class="price">30 MAD</p><p>Sur présentation de la carte étudiant. Accès aux deux jours.</p></article>
+    <article><h3>Pass Standard</h3><p class="price">60 MAD</p><p>Accès aux deux jours pour une personne.</p></article>
+    <article><h3>Pass Duo</h3><p class="price">100 MAD</p><p>Accès aux deux jours pour deux personnes.</p></article>
+  </div>
+</section>
+
+<section id="inscription" class="block">
+  <h2>Réserver ma place</h2>
+  <form id="form" novalidate>
+    <label>Nom complet
+      <input type="text" name="nom" autocomplete="name" required>
+      <span class="err" data-for="nom"></span>
+    </label>
+    <label>Adresse e-mail
+      <input type="email" name="email" autocomplete="email" required>
+      <span class="err" data-for="email"></span>
+    </label>
+    <label>Pass
+      <select name="pass" required>
+        <option value="">Choisir un pass</option>
+        <option>Pass Étudiant, 30 MAD</option>
+        <option>Pass Standard, 60 MAD</option>
+        <option>Pass Duo, 100 MAD</option>
+      </select>
+      <span class="err" data-for="pass"></span>
+    </label>
+    <button class="btn" type="submit">Réserver ma place</button>
+    <p id="result" role="status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <p>Electro Vibes ENSA 2026, École Nationale des Sciences Appliquées d'El Jadida.</p>
+  <p>contact@electrovibes-ensa.example</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
